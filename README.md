@@ -9,8 +9,8 @@ version 0.1 pre-deployment
 
 Future builds: 
 
-Finalize contact style 
-test sendmail intergration in contact form 
-upload backround image 
-update contact buttons with images 
-pudate site and github links 
+Finalize contact style <br>
+test sendmail intergration in contact form <br>
+upload backround image <br>
+update contact buttons with images <br> 
+pudate site and github links <br>
