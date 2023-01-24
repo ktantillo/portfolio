@@ -1,0 +1,79 @@
+
+  
+
+  
+
+
+  <div class="container" id="contact">
+
+    <h2 class="title">Contact Me!</h2>;
+    <br>
+    <br>
+
+  
+  <form (ngSubmit)="submitForm()" #contactForm="ngForm" action="https://formsubmit.co/katie.m.tantillo@gmail.com" method="POST">
+      <div class="field">
+        <label class="label">Name</label><br>
+        <input 
+            type="text" 
+            size="maxlength" 
+            name="name" 
+            class="input" 
+            [(ngModel)]="name"
+            #nameInput="ngModel" 
+            required>
+
+            <div class="help is-error" *ngIf="nameInput.invalid && nameInput.touched">
+                <h6>Please enter your name.</h6>
+            </div>
+
+            
+      </div>
+    
+      <div class="field">
+        <label class="label">Email</label><br>
+        <input 
+            type="email" 
+            name="email" 
+            class="input" 
+            [(ngModel)]="email" 
+            #emailInput="ngModel"
+            required
+            email>
+
+            <div class="help is-required" *ngif="emailInput.invalid && emailInput.touched">
+                
+                <h6>Please enter a valid email.</h6> 
+            </div>
+            
+
+      </div>
+
+      <div class="field">
+        <label class="label">Your Message</label><br>
+        <textarea rows="2" cols="25" name="message" name="name" class="textarea" [(ngModel)]="message"></textarea>
+      </div>
+
+      <button 
+        type="submit" 
+        class="button"
+        [disabled]="contactForm.invalid">
+        <span>Send</span>
+      </button> <br>
+
+      <button type="button" class="button"><span>Gmail</span>
+      </button> 
+      <button type="button" class="button"><span>LinkedIn</span>
+      </button> 
+      <button type="button" class="button"><span>GitHub</span>
+      </button> 
+      <button type="button" class="button"><span>Drizzle</span>
+      </button> 
+  </form>,
+  <form action="https://formsubmit.co/katie.n.tantillo@gmail.com" method="POST">
+    <input type="text" name="name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <textarea rows="2" cols="25" name="message" name="name" class="textarea" [(ngModel)]="message"></textarea>
+
+    <button type="submit">Send</button>
+</form>
